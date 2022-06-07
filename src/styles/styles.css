@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .copyrit {
+    /* im so cool */
+    font-size: 100px;
+    text-align: center;
+    color: whitesmoke;
+    background: -webkit-linear-gradient(pink, blue, white, blue, pink);
+  }
+  
+  .gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
