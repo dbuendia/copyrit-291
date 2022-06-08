@@ -4,28 +4,28 @@ Crea una funcion, getUser(id) la cual toma un id (un numero) y muestra por conso
 
 */
 
-let endpointUsers = "https://jsonplaceholder.typicode.com/users/";
-// Instead we use a BASE URL
+// El endpoint será una constante con la parte de la URL que no cambiará.
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 
 function getUser(id) {
-  // Comprobamos que id sea un número
   if (typeof id === "number") {
+    // Podemos usar backticks (``) para crear strings con variables en ellos con la siguiente sintaxis.
+    // Además, no es necesario concatenar con +.
     const USER_URL = `${BASE_URL}/users/${id}`;
+
     fetch(USER_URL)
       .then(response => response.json())
       .then(data => {
         return console.log(data);
       })
-      .catch(error => console.log(error));
+      .catch(error => console.error(error));
   } else {
-    console.log("No se ha indicado un número como id de usuario");
+    console.error("No se ha indicado un valor numérico como id de usuario.");
   }
 }
 
-console.log("get users callback");
-getUser(1);
-// getUser(5);
+// console.log("Get users callback");
+// getUser(1);
 // getUser("1");
 
 /*
@@ -39,22 +39,23 @@ function getPosts(id) {
   const POST_URL = `${BASE_URL}/posts/${id}`;
   const ALL_POSTS_URL = `${BASE_URL}/posts/`;
 
+  // Si no se pasa argumento al invocar la función se mostrarán todos los posts.
   if (id === undefined) {
     fetch(ALL_POSTS_URL)
       .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error));
+      .then(data => console.table(data))
+      .catch(error => console.error(error));
   } else {
     fetch(POST_URL)
       .then(response => response.json())
-      .then(data => console.dir(data))
-      .catch(error => console.log(error));
+      .then(data => console.table(data))
+      .catch(error => console.error(error));
   }
 }
 
-console.log("get POSTS callback");
-getPosts(5);
-getPosts(); // Así podría querer mostrar todos los posts.
+// console.log("Get Posts callback");
+// getPosts(5);
+// getPosts();
 
 /*
 
@@ -87,5 +88,3 @@ function getResource(resource) {
 getResource("users");
 getResource("posts");
 getResource("What a country");
-
-console.info({ prop: "HEY GUESS WHAT MIMI" });

@@ -12,6 +12,12 @@
 // Abrir o cerrar la barra lateral:
 // cmd + b (barra)
 
+// Console Log
+// clg + tab
+
+// Console Log Object (O cualquier variable)
+// clo + tab
+
 /************/
 
 // Misc:
