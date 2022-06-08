@@ -1,4 +1,4 @@
-/* 
+/*
 
 Generamos una nueva promisa con "new"
 La promesa recibe por parámetro un callback (función que se ejecutará más tarde)
@@ -21,8 +21,8 @@ const myPromise = new Promise((resolve, reject) => {
 // Con .catch indicamos lo que queremos que ocurra cuando se reciba la resolución de una promesa fallida
 
 myPromise
-  .then((success) => console.log("Yeah, " + success))
-  .catch((error) => console.log("Oh oh... " + error));
+  .then(success => console.log("Yeah, " + success))
+  .catch(error => console.log("Oh oh... " + error));
 
 // En el ejemplo anterior, probablemente nada impida que aparezca el mensaje de éxito, pues nada generará error.
 
@@ -48,8 +48,8 @@ myRandomPromise
 // Se pueden encadenar varios .then, pero se debe incluir un return, que será el argumento que recibirá el siguiente .then
 
 myRandomPromise
-  .then((exito) => {
+  .then(exito => {
     return "Promesa cumplida 2: " + exito;
   })
-  .then((mensajeFinal) => console.log("El mensaje final es: " + mensajeFinal))
-  .catch((fallo) => console.log("Promesa rota 2: " + fallo));
+  .then(mensajeFinal => console.log("El mensaje final es: " + mensajeFinal))
+  .catch(fallo => console.log("Promesa rota 2: " + fallo));

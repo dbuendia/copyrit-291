@@ -1,4 +1,4 @@
-/* 
+/*
 Write a loop that makes seven calls to console.log to output the following triangle:
 #
 ##
@@ -28,7 +28,7 @@ for (let i = 0; i < 7; i++) {
 
 console.log("Third dragpproach:");
 
-/* Haz una función que imprima por consola una pirámide triangular, 
+/* Haz una función que imprima por consola una pirámide triangular,
 como la de ahora, pero la función toma como parámetro el número de niveles y el caracter */
 
 function dragiangle(plantas, buildingBlock) {

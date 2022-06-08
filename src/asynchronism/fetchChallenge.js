@@ -1,6 +1,6 @@
 /*
 
-Crea una funcion, getUser(id) la cual toma un id (un numero) y muestra por consola ese usuario. 
+Crea una funcion, getUser(id) la cual toma un id (un numero) y muestra por consola ese usuario.
 
 */
 
@@ -30,7 +30,7 @@ getUser(1);
 
 /*
 
-Desarrolla la función getPosts(). 
+Desarrolla la función getPosts().
 Revisa la documentación de https://jsonplaceholder.typicode.com/ para identificar el endpoint.
 
 */
@@ -58,7 +58,7 @@ getPosts(); // Así podría querer mostrar todos los posts.
 
 /*
 
-Desarrolla la función getResource(resource) la cual toma un parámetro de tipo string llamado “resource”, 
+Desarrolla la función getResource(resource) la cual toma un parámetro de tipo string llamado “resource”,
 Esta función solo puede recibir como parámetros el string “users” o el string “posts”.
 Devuelve todos los usuarios o todos los posts.
 

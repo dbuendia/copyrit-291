@@ -16,7 +16,7 @@ const personas = [
 // Utiliza .map para crear un nuevo array de objetos,
 // donde cada objeto tenga solo el nombre y apellido de cada persona
 
-let arrayNombreyApellido = personas.map((elem) => {
+let arrayNombreyApellido = personas.map(elem => {
   return { nombre: elem.first, apellido: elem.last };
 });
 
@@ -26,7 +26,7 @@ console.log(arrayNombreyApellido);
 // Utiliza .map para crear un nuevo array de objetos,
 // donde cada objeto tenga solo el nombre y la fecha de nacimiento de cada persona
 
-let arrayNombreyFecha = personas.map((elem) => {
+let arrayNombreyFecha = personas.map(elem => {
   return {
     nombre: elem.first,
     nacimiento: elem.nacio,
@@ -40,7 +40,7 @@ console.log(arrayNombreyFecha);
 // Utiliza .filter para crear un nuevo array de objetos
 // donde cada objeto represente la persona que haya nacido durante el 1800
 
-let arraySigloXIX = personas.filter((elem) => {
+let arraySigloXIX = personas.filter(elem => {
   return elem.nacio >= 1800 && elem.nacio < 1900;
 });
 
@@ -50,7 +50,7 @@ console.log(arraySigloXIX);
 // Utiliza .map para crear un nuevo array de objetos con el apellido
 // de cada persona y su edad (murio - nacio)
 
-let arrayApellidoyEdad = personas.map((elem) => {
+let arrayApellidoyEdad = personas.map(elem => {
   return {
     apellido: elem.last,
     edadFallecimiento: elem.murio - elem.nacio,
@@ -65,7 +65,7 @@ console.log(arrayApellidoyEdad);
 // Utiliza .filter para crear un nuevo array de objetos con las personas
 // cuyo nombre sea mayor a 4 letras
 
-let arrayNombreMayor4 = personas.filter((elem) => elem.first.length > 4);
+let arrayNombreMayor4 = personas.filter(elem => elem.first.length > 4);
 
 console.log("Array de objetos de personas cuyo nombre sea mayor a 4 letras");
 console.log(arrayNombreMayor4);
@@ -73,7 +73,7 @@ console.log(arrayNombreMayor4);
 // Utiliza .filter para crear un nuevo array de objetos con las personas
 // que hayan nacido después de 1800
 
-let arrayPost1800 = personas.filter((elem) => elem.nacio > 1800);
+let arrayPost1800 = personas.filter(elem => elem.nacio > 1800);
 
 console.log("Array de objetos de personas nacidas después de 1800:");
 console.log(arrayPost1800);
@@ -81,7 +81,7 @@ console.log(arrayPost1800);
 // Utiliza .filter  para para crear un nuevo array de objetos con las personas
 // que hayan tenido una edad par (edad % 2 === 0, busca en google el operador "modulo")
 
-let arrayEdadFallecimientoPar = personas.filter((elem) => {
+let arrayEdadFallecimientoPar = personas.filter(elem => {
   return (elem.murio - elem.nacio) % 2 === 0;
 });
 
@@ -90,7 +90,7 @@ console.log(arrayEdadFallecimientoPar);
 
 console.log("Mostramos dichas edades:");
 
-let even = arrayEdadFallecimientoPar.map((elem) => {
+let even = arrayEdadFallecimientoPar.map(elem => {
   return { edadFallecimientoPar: elem.murio - elem.nacio };
 });
 console.log(even);

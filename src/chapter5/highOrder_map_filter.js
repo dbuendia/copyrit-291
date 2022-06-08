@@ -1,29 +1,29 @@
-/* 
+/*
 
 High Order Functions:
-Son funciones que operan con otras funciones  (ya sea como argumento 
+Son funciones que operan con otras funciones  (ya sea como argumento
 o retornando otras funciones). Nos permiten “abstraer” acciones.
 
 */
 
-/* 
+/*
 La función greaterThan recibe el parámetro n.
 Devuelve una función anónima (que recibirá el parámetro m por argumento
 y, a su vez devolverá un valor booleano si m es mayor que n)
 */
 
 function greaterThan(n) {
-  return (m) => m > n;
+  return m => m > n;
 }
 
 // Podemos definir una variable con nuestra función:
 let greaterThan10 = greaterThan(10); // n = 10.
 
-/* 
+/*
 Ahora, podemos invocar la función que contiene nuestra variable greatherThan10
-Como la variable ES la función anónima, el parámetro que pasamos, (11), 
+Como la variable ES la función anónima, el parámetro que pasamos, (11),
 es, por lo tanto m. La función es capaz de recordar que el valor de n es 10 gracias
-al closure. 
+al closure.
 */
 
 console.log("Greater than 10 test: ");
@@ -46,7 +46,7 @@ function repeat(n, action) {
   }
 }
 
-/* 
+/*
 Invocamos a la función con nuestros dos parámetros:
 
 n = 3 (se repetirá 3 veces)
@@ -55,7 +55,7 @@ retorna la función unless.
 
 */
 
-repeat(3, (n) => {
+repeat(3, n => {
   // Si se cumple la condición, se retorna otra función anónima que loguea si n es par.
   unless(n % 2 == 1, () => {
     console.log(n, "is even");
@@ -72,7 +72,7 @@ function unless(test, then) {
   if (!test) then(); // Then es a future callback. La función anónima anterior
 } // Else, no se ejecuta nada.
 
-/* 
+/*
 Callback es una funcion que se ejecutará dentro de otra función en algún momento.
 Normalmente se pasa como parámetro.
  */
@@ -81,7 +81,7 @@ Normalmente se pasa como parámetro.
 
 function hola(nombre) {
   console.log(nombre);
-  return (apellido) => {
+  return apellido => {
     console.log(apellido);
     console.log(nombre + " " + apellido);
     return true;
@@ -118,12 +118,12 @@ console.log("Filter test:");
 arrayStrings = ["hola", "ciao", "chanel"];
 
 // Devuelve los elementos del array que tengan una length mayor a 4.
-console.log(arrayStrings.filter((elem) => elem.length > 4));
+console.log(arrayStrings.filter(elem => elem.length > 4));
 // Chanel
 
 arrayOfObjects = [{ number: 1 }, { number: 2 }, { number: 3 }];
 // Devuelve los elementos del array de objetos cuya propiedad number sea 3.
-console.log(arrayOfObjects.filter((elemento) => elemento.number == 3));
+console.log(arrayOfObjects.filter(elemento => elemento.number == 3));
 
 // Otro ejemplo que devuelve los objetos cuya propiedad1 sea hola.
 array = [
@@ -131,7 +131,7 @@ array = [
   { propiedad1: "adios" },
   { propiedad1: "hola" },
 ];
-console.log(array.filter((elemento) => elemento.propiedad1 === "hola"));
+console.log(array.filter(elemento => elemento.propiedad1 === "hola"));
 
 // Map: es un método de arrays que
 // Recibe un array como parametro y devuelve un nuevo array del mismo tamaño tras aplicar una función a cada elemento.
@@ -140,12 +140,12 @@ console.log("Map test:");
 
 // Devuelve los números del array multiplicados * 2
 const numbers = [65, 44, 12, 4];
-const newArr = numbers.map((element) => {
+const newArr = numbers.map(element => {
   console.log(element * 2);
 });
 
 // Devuelve true si la propiedad del elemento del array es hola
-const newArray = array.map((elem) => elem.propiedad1 === "hola");
+const newArray = array.map(elem => elem.propiedad1 === "hola");
 console.log(newArray);
 
 /*
@@ -157,7 +157,7 @@ Recorre todos los elementos de un array:
 */
 
 // Por cada elemento del array numbers, loguea cool si es 4 o mal si no lo es.
-numbers.forEach((elem) => {
+numbers.forEach(elem => {
   console.log(elem === 4 ? "cool" : "mal");
 });
 

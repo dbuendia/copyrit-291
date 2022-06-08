@@ -1,4 +1,4 @@
-/* 
+/*
 
 Usamos la Fetch API para comunicarnos desde Javascript a otra API hosteada en internet.
 Esta API la proveen los navegadores y siempre va a retornar una promesa.
@@ -24,12 +24,12 @@ estos datos, pasarlos al siguiente .then cuando estén listos y ya podremos trab
 let endpoint = "https://jsonplaceholder.typicode.com/users";
 
 fetch(endpoint)
-  .then((response) => {
+  .then(response => {
     // Si hacemos log de nuestra response veremos que se nos printa el header con distinta información sobre la petición.
     console.log(response);
 
     // Pero normalmente sólo necesitamos el body de la petición con los datos:
     return response.json();
   })
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error));
+  .then(data => console.log(data))
+  .catch(error => console.log(error));

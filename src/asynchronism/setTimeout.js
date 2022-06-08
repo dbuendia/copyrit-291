@@ -22,7 +22,7 @@ setTimeout(() => console.log("Huesitos 🦴"), 3000);
 */
 
 console.log("Nueva carrera");
-/* Si comentamos la carrera anterior, en esta nueva carrera podremos observar como, 
+/* Si comentamos la carrera anterior, en esta nueva carrera podremos observar como,
 aunque el timeout sea de 0 ms, la función se va a ejecutar después del resto */
 
 setTimeout(function () {
@@ -32,11 +32,11 @@ setTimeout(function () {
 console.log("Toad 🍄");
 console.log("Bowser 🐲");
 
-/* 
+/*
 
 Esto ocurre porque si javascript detecta que hay alguna función asíncrona, la va a
-resolver después de las demás. Se gestiona por lo que se conoce como "event loop", 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop 
+resolver después de las demás. Se gestiona por lo que se conoce como "event loop",
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 que gestiona este tipo de funciones (peticiones al servidor, etc). En este caso, DESPUÉS
 de haber ejecutado las funciones síncronas, se dispara el timeout de 0 ms y se resuelve la función.
 
@@ -66,9 +66,9 @@ console.log("Toad 🍄");
 console.log("Vuelta 6");
 */
 
-/* 
-Cuidado con poner timeouts demasiado bajos. 
-Si por ejemplo usamos valores de 1 ms en Mario y 0 en Luigi, en realidad 
+/*
+Cuidado con poner timeouts demasiado bajos.
+Si por ejemplo usamos valores de 1 ms en Mario y 0 en Luigi, en realidad
 va a llegar antes Mario, porque el timeout se dispara más rápido del tiempo
 que tarda javascript en leer y enviar Luigi a la cola (aunque su timeout sea de 0). */
 
