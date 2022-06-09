@@ -1,4 +1,4 @@
-_Atajos de teclado:_
+**Atajos de teclado:**
 
 Modo multiculsor:
 Seleccionar la palabra y pulsar cmd+d
@@ -20,22 +20,24 @@ clo + tab
 
 ---
 
-Misc:
+**Misc:**
 
 Buscar documentación en: https://developer.mozilla.org/es/docs/Web/JavaScript
 DEV.TO
 Medium
 
-_Diferencia entre un valor primitivo y uno estructural:_
+---
+
+**Diferencia entre un valor primitivo y uno estructural:**
 El primitivo se guarda/pasa por valor y el estructural se guarda/pasa por referencia.
 
-_Abstraction (Abstraer)_
+**Abstraction (Abstraer)**
 Aislar e individualizar las instrucciones que tiene que realizar el código
 tanto como se pueda con el objetivo de que sea más fácil de leer y depurar
 (pues cada fragmento de código hará una sola cosa). Una buena manera de abstraer
 es usar funciones (pues nos permiten aislar acciones).
 
-_Closure:_
+**Closure:**
 Se produce cuando una función utiliza una variable que proviene de fuera de ella misma.
 Es decir: cuando una función que referencia variables que están fuera de su inner scope.
 
@@ -44,23 +46,23 @@ creada.
 
 Es una función que guarda referencias del estado del scope en que fue creada. (Ver ejemplo greaterThan10)
 
-_Función pura:_
+**Función pura:**
 Aquella que dados los mismos parámetros retorna el mismo resultado.
 
-_High Order Functions:_
+**High Order Functions:**
 Son funciones que operan con otras funciones (ya sea como argumento
 o retornando otras funciones). Nos permiten “abstraer” acciones.
 
-_Callback:_
+**Callback:**
 Es una funcion que se ejecutará dentro de otra función en algún momento. Normalmente se pasa como parámetro.
 
-_Asincronismo_
+**Asincronismo**
 Javascript es un lenguaje sincrónico y de un solo hilo.
 Es el concepto que le permite a una aplicación web poder hacer tareas simultáneamente
 sin la necesidad de bloquear procesos, esperando las completaciones.
 En javascript se maneja con el callstack y el event loop.
 
-_Event loop:_
+**Event loop:**
 Es la forma en la que el runtime de javascript gestiona las llamadas a las funciones.
 
 El runtime vendría a ser el modelo de ejecución de un lenguaje de programación.
@@ -94,7 +96,7 @@ pero NO puede realizarlo si hay tareas en el stack, debe esperar a que esté vac
 
 Más referencias: https://www.youtube.com/watch?v=8aGhZQkoFbQ y latentflip.com
 
-_Promise / Promesas_
+**Promise / Promesas**
 
 Es un objeto que permite realizar una acción asíncrona, de la cual no sabemos (a priori)
 el resultado, y que va a gestionarse fuera del front-end (en el servidor, una api externa, etc).
@@ -104,13 +106,13 @@ devuelva cierta acción. La promesa tiene el estado inicial de pending. Luego,
 puede completarse (fulfilled) o rechazarse (rejected) y debemos gestionar ambas opciones,
 normalmente con los métodos .then y .catch.
 
-_API_
+**API**
 
 TODO: Application Programming Interface
 
 https://www.redhat.com/es/topics/api/what-is-a-rest-api
 
-_Contextos_
+**Contextos**
 El contexto puede definirse como la disponibilidad de una variable según un entorno.
 
 Existe el contexto local y el global.
@@ -126,5 +128,5 @@ En javascript, cada archivo independiente puede ser un módulo.
 El uso de módulos nos permite independizar el código.
 Podemos separar funcionalidades y sólo conectar entre módulos los datos y funciones que vayamos a necesitar.
 
-_Named exports y Default exports_
+**Named exports y Default exports**
 TODO
