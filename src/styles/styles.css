@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
   }
-  
+
   .copyrit {
     /* im so cool */
     font-size: 100px;
@@ -9,7 +9,7 @@ body {
     color: whitesmoke;
     background: -webkit-linear-gradient(pink, blue, white, blue, pink);
   }
-  
+
   .gif {
     display: block;
     margin-left: auto;

@@ -4,7 +4,7 @@
  */
 
 function mostrarNombres(array) {
-  array.forEach(elem => {
+  array.forEach((elem) => {
     console.log(elem.nombre);
   });
 }

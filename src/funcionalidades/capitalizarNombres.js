@@ -7,23 +7,26 @@
 function capitalizarNombres(array) {
   return array.map((elem) => {
     return {
-      // Primero se pone la propiedad que se quiere override
+      // La función retorna un array de objetos
+      // Primero hacemos un spread de las propiedades de cada elemento
       ...elem,
+      // Después hacemos override de la propiedad que queremos modificar
       nombre: elem.nombre.toUpperCase(),
-      // Después hacemos spread del resto de propiedades del elemento
     };
   });
 }
 
 // Versión larga sin ...elem
 
-// return array.map((elem) => {
-//   return {
-//     nombre: elem.nombre.toUpperCase(),
-//     seccion: elem.seccion,
-//     rol: elem.rol,
-//     id: elem.id
-//   };
-// });
+/*
+return array.map((elem) => {
+  return {
+    nombre: elem.nombre.toUpperCase(),
+    seccion: elem.seccion,
+    rol: elem.rol,
+    id: elem.id
+  };
+});
+*/
 
 export default capitalizarNombres;

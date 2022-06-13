@@ -7,7 +7,7 @@
  */
 
 function buscarPersona(array, id) {
-  let persona = array.find(elem => elem.id === id);
+  let persona = array.find((elem) => elem.id === id);
   return persona;
 }
 
