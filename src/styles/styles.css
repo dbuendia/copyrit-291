@@ -31,6 +31,7 @@ h1 {
   justify-content: center;
   /* align-items: altera la propiedad del eje secundario */
   align-items: center;
+  /* Para centrar en VERTICAL es importante que los contenedores tengan una altura definida, si no, flex no sabe dónde centrar */
   height: 100vh;
 }
 
